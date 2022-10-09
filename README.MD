@@ -1,5 +1,7 @@
 # NODE.JS EXERCISES SOLUTIONS
 
+Esercizi risolti di Node.js.
+
 ## 01 - INTRODUCTION TO NODE.JS: The Process Module
 
 Vogliamo che il programma in app.js memorizzi la quantità iniziale di memoria utilizzata (heapUsed), esegua un'operazione e quindi confronti la quantità finale di memoria utilizzata con la quantità originale. Al momento, la variabile initialMemory è assegnata a null. Modificare questa riga, in modo che a initialMemory venga invece assegnato il valore della proprietà heapUsed sull'oggetto restituito dal richiamo del metodo process.memoryUsage().
