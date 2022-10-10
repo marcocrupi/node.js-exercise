@@ -225,3 +225,41 @@ flan
 pork
 tamarind
 ```
+
+## 06 - NODE.JS ESSENTIALS - Writeable Streams
+
+Uniamo la nostra conoscenza dei flussi leggibili e scrivibili per creare un programma che legge da un file di testo e poi scrive su un altro.
+
+script.js
+
+```js
+const readline = require("readline");
+const fs = require("fs");
+
+const myInterface = readline.createInterface({
+  input: fs.createReadStream("shoppingList.txt"),
+});
+
+const fileStream = fs.createWriteStream("shoppingResults.txt");
+
+let transformData = (line) => {
+  fileStream.write(`They were out of: ${line}\n`);
+};
+
+myInterface.on("line", transformData);
+```
+
+shoppingList.txt
+
+```txt
+apples
+pears
+royal jelly
+bread
+milk
+tofu
+beans
+flan
+pork
+tamarind
+```
